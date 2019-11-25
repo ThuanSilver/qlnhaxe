@@ -1,0 +1,76 @@
+@font-face{
+	src:url('font/Roboto_Slab/RobotoSlab-Regular.ttf');
+	font-family:'Roboto Slab', serif;
+}
+*{
+	margin:0;
+	padding: 0;
+}
+/*css cho xuất hóa đơn bán lẻ*/
+.text h3{
+	
+}
+.form_hd{
+	padding-left: 290px;
+}
+.form_hd form.form-inline {
+    border-bottom: 1px solid #80808057;
+    padding-bottom: 20px;
+}
+.form_hd label{
+	margin-right: 10px;
+}
+.mahd{
+	padding-left: 50px;
+}
+.table_xuatbl{
+	padding-left: 350px;
+}
+.kiten{
+	position: relative;
+	left: 30%;
+	padding-bottom: 50px;
+}
+/*hết css xuất hóa đơn bán lẻ*/
+/*css cho xuất hóa đơn nội bộ*/
+.form_xuatnb{
+	padding-left: 290px;
+}
+.form_xuatnb form.form-inline {
+    padding-bottom: 10px;
+
+}
+.table_xuatnb {
+    padding-left: 312px;
+}
+.form_xuatnb .xuat_inline{
+	border-bottom: 1px solid #80808057;
+}
+.form_xuatnb label{
+	margin-right: 10px;
+}
+ .tukho{
+	margin-left: 27px;
+}
+label.denkho {
+    padding-left: 73px;
+}
+.kiten_banle{
+	position: relative;
+	left: 20%;
+	padding-bottom: 20px;
+}
+
+/*hết css cho xuất hóa đơn nội bộ*/
+/*css cho bán xĩ*/
+.kiten_banxi{
+	position: relative;
+	left: 26%;
+	padding-bottom: 20px;
+}
+.table_xuatbx{
+	 padding-left: 265px;
+}
+.denkho_bx{
+	padding-left: 15px;
+}

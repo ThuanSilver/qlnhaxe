@@ -1,0 +1,137 @@
+
+*{
+	margin:0;
+	padding: 0;
+}
+boby{
+  background-color: gray;  
+}
+@font-face{
+	src:url('font/Roboto_Slab/RobotoSlab-Regular.ttf');
+	font-family:'Roboto Slab', serif;
+}
+body{
+    background-color: #f8f9fa;
+   
+}
+.navbar-dark .navbar-brand {
+    font-weight: 700;
+}
+.navbar-custom {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: rgba(0,0,0,.7);
+}
+.row{
+    background-color: #fff;
+}
+.xe{
+   
+
+}
+.navbar-dark .navbar-brand {
+    font-weight: 700;
+    background: #faf8fa14;
+    color: white !important;
+    padding: 10px 15px;
+    margin-top: -22px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.left{
+    background-color: #4e73df;
+    background-image: linear-gradient(180deg,#e74a3b 10%,#be22309e 100%);
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    background-color: rgba(255, 255, 255, 0.11);
+}
+.danhmuc {
+    color: #fff;
+    font-size: 1.5rem;
+}
+.left a{
+    color: #fff
+}
+.left a:hover{
+    color: gray;
+}
+.right{
+    margin-top: 2REM;
+    border: 1px solid #8080803d;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.btn_kt {
+    padding-top: 2rem;
+    margin-left: -38px;
+    display: inline-flex;
+    float: left;
+}
+
+.tab-xe{
+    padding: 50px;
+}
+
+.tab-xe ul.tab {
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+}
+.tab-xe ul.tab li{
+    float: left;
+    list-style: none;
+    margin: 5px;
+}
+
+.btn-secondary {
+
+    color: #f8f9fa;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.quanli{
+	border: #80808073 solid 1px;
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+.quanli1{
+	padding:10px;
+}
+.btn-sm, .btn-group-sm > .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+    margin-left: 50px;
+}
+.row.button_dau {
+    padding-bottom: 20px;
+}
+ 
+.tab-xe ul li a{
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.tab-xe ul.tab li.active button.btn-secondary  {
+    background: #49505799 !important;
+    border-color: #49505799;
+}
+.quanli{
+    padding: 20px;
+}
+.form_check {
+    padding-top: 20px;
+}
+button.btn.btn-primary.btn-sm.ket_thuc {
+    padding: 10px 30px;
+    margin-left: 78px;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #1e7e34;
+    border-color: #1e7e34;
+}
+label.ngaymua {
+    padding-top: 8px;
+}
