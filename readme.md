@@ -1,4 +1,4 @@
-<p> <span  style="color: red;font-size: 32px;text-align: center">WEBSITE QUẢN LÝ CHUỖI CỬA HÀNG XE MÁY BẰNG LARAVEL </span></p>
+<p> align="center"; color = red>WEBSITE QUẢN LÝ CHUỖI CỬA HÀNG XE MÁY BẰNG LARAVEL </span></p>
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
