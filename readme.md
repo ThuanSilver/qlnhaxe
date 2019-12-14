@@ -1,4 +1,4 @@
-<p align="center"><WEBSITE QUẢN LÝ CHUỖI CỬA HÀNG XE MÁY BẰNG LARAVEL width="400"></p>
+<p align="center"><WEBSITE QUẢN LÝ CHUỖI CỬA HÀNG XE MÁY BẰNG LARAVEL ></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
