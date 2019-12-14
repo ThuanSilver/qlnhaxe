@@ -15,10 +15,13 @@ class CreateKhachhangTable extends Migration
     {
         Schema::create('khachhang', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('Hovaten');
-            $table->string('ngaysinh');
+            $table->string('name');
+            $table->date('ngaysinh')->default(now());
             $table->string('sdt');
             $table->string('diachi');
+            $table->string('phuong');
+            $table->string('thanhpho');
+            $table->string('tinh');
             $table->timestamps();
         });
     }

@@ -11,12 +11,13 @@ class khachhangimport implements ToModel
     public function model(array $row)
     {
         return new khachhang([
-            'hovaten'     => $row[0],
+            'name'     => $row[0],
             'ngaysinh'    => $row[1],
             'sdt'    => $row[2],
             'diachi'    => $row[3],
-
-
+            'phuong'    => $row[4],
+            'tinh'    => $row[5],
+            'thanhpho'    => $row[6],
         ]);
     }
 }

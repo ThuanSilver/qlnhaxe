@@ -29,25 +29,25 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>người nhận:</strong>
-                    <input type="text" name="name" value="{{ $nhanvien->nguoinhan }}" class="form-control" placeholder="họ và tên">
+                    <strong>tên nhân viên:</strong>
+                    <input type="text" name="name" value="{{ $nhanvien->name }}" class="form-control" placeholder="họ và tên">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>người kiểm tra:</strong>
-                    <input type="text" name="name" value="{{ $nhanvien->nguoikt }}" class="form-control" placeholder="họ và tên">
+                    <input type="text" name="chucvu" value="{{ $nhanvien->chucvu }}" class="form-control" placeholder="chức vụ">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>nhân viên bảo hiểm:</strong>
-                    <input type="text" name="name" value="{{ $nhanvien->nhanvienbh }}" class="form-control" placeholder="họ và tên">
+                    <strong>số điện thoại:</strong>
+                    <input type="text" name="sdt" value="{{ $nhanvien->sdt}}" class="form-control" placeholder="số điện thoại">
                 </div>
             </div>
 
 
-            </div>
+
 
 
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">

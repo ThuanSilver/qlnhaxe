@@ -6,7 +6,14 @@
         <div class="col-lg-12">
             <h2 class="text-center">thông tin xe nhập </h2>
         </div>
-
+        <div class="card-body">
+            <form action="{{ route('nhapxeimport') }}" method="post" enctype="multipart/form-data">
+                @csrf
+                <input type="file" name="file" class="form-control">
+                <br>
+                <button class="btn btn-success">nhập từ file</button>
+            </form>
+        </div>
         <div class="col-lg-12 text-center" style="margin-top:10px;margin-bottom: 10px;">
             <a class="btn btn-success " href="{{ route('nhapxe.create') }}"> nhập xe</a>
         </div>
@@ -30,7 +37,7 @@
                 <th>số khung</th>
                 <th>số máy</th>
                 <th>ngày nhận</th>
-                <th>kho nhận</th>
+
                 <th>giá nhập</th>
                 <th width="280px">More</th>
 </tr>
@@ -38,14 +45,14 @@
             @foreach ($nhapxes as $nhapxe)
                 <tr>
                     <td>{{ ++$i }}</td>
-                    <td>{{ $nhapxe->thongtinxe->loaixe }}</td>
-                    <td>{{ $nhapxe->thongtinxe->tenxe}}</td>
-                    <td>{{ $nhapxe->thongtinxe->doixe}}</td>
-                    <td>{{ $nhapxe->thongtinxe->mauxe}}</td>
-                    <td>{{ $nhapxe->thongtinxe->sokhung }}</td>
-                    <td>{{ $nhapxe->thongtinxe->somay}}</td>
+                    <td>{{ $nhapxe->loaixe }}</td>
+                    <td>{{ $nhapxe->tenxe}}</td>
+                    <td>{{ $nhapxe->doixe}}</td>
+                    <td>{{ $nhapxe->mauxe}}</td>
+                    <td>{{ $nhapxe->sokhung }}</td>
+                    <td>{{ $nhapxe->somay}}</td>
                     <td>{{ $nhapxe->ngaynhan}}</td>
-                    <td>{{ $nhapxe->kho->dia_diem}}</td>
+
                     <td>{{ $nhapxe->gianhap}}</td>
                     <td>
                         @can('admin')
@@ -95,7 +102,7 @@
             });
             $('.data-table').DataTable({
                 columnDefs: [{
-                    targets: [10],
+                    targets: [8],
                     searchable: false,
                     orderable: false,
                     visible: true

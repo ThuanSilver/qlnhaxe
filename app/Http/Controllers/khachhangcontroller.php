@@ -15,12 +15,7 @@ class khachhangcontroller extends Controller
 
         return view('khachhang.index',compact('khachhangs'))->with('i', (request()->input('page', 1) - 1) * 10);
     }
-    public function search (Request $request){
-        $search =$request->get('search');
-        $khachhangs=DB::table('khachhang')->where('Hovaten','like','%'.$search.'%')->paginate(5);
-        return view('khachhang.index',compact('khachhangs'))->with('i', (request()->input('page', 1) - 1) * 5);
 
-    }
     public function create()
     {
         return view('khachhang.create');
@@ -28,11 +23,17 @@ class khachhangcontroller extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'hovaten' => 'required',
+            'name' => 'required',
             'ngaysinh' => 'required',
             'sdt' => 'required',
             'diachi' => 'required',
-        ]);
+            'phuong' => 'required',
+            'thanhpho' => 'required',
+            'tinh' => 'required',
+        ]
+
+        );
+
         khachhang::create($request->all());
         return redirect()->route('khachhang.index')->with('success','thêm thành công .');
     }
@@ -47,10 +48,13 @@ class khachhangcontroller extends Controller
     public function update(Request $request, khachhang $khachhang)
     {
         $request->validate([
-            'hovaten' => 'required',
+            'name' => 'required',
             'ngaysinh' => 'required',
             'sdt' => 'required',
             'diachi' => 'required',
+            'phuong' => 'required',
+            'thanhpho' => 'required',
+            'tinh' => 'required',
         ]);
         $khachhang->update($request->all());
         return redirect()->route('khachhang.index')->with('success','sửa thành công.');

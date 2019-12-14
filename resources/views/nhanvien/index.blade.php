@@ -31,19 +31,19 @@
 
             <tr>
                 <th>stt</th>
-                <th>người nhận </th>
-                <th>người kiểm tra</th>
-                <th>nhân viên bảo hiển </th>
+                <th>Tên </th>
+                <th>Chức vụ</th>
+                <th>Số điện thoại</th>
+
                 <th width="280px">More</th>
             </tr>
             </thead>
             @foreach ($nhanviens as $nhanvien)
                 <tr>
                     <td>{{ ++$i }}</td>
-                    <td>{{ $nhanvien->nguoinhan }}</td>
-                    <td>{{ $nhanvien->nguoikt }}</td>
-                    <td>{{ $nhanvien->nhanvienbh }}</td>
-
+                    <td>{{ $nhanvien->name }}</td>
+                    <td>{{ $nhanvien->chucvu }}</td>
+                    <td>{{ $nhanvien->sdt }}</td>
                     <td>
                         @can('admin')
                         <form action="{{ route('nhanvien.destroy',$nhanvien->id) }}" method="POST">
@@ -93,7 +93,7 @@
             });
             $('.data-table').DataTable({
                 columnDefs: [{
-                    targets: [0,4],
+                    targets: [0,3],
                     searchable: false,
                     orderable: false,
                     visible: true

@@ -30,45 +30,24 @@
                 <div class="col-6 col-sm-6">
                     <div class="form-group">
                         <label for="loaixe">Loại xe</label>
-                        <select class="form-control"  name="thongtinxe_id">
-                            @foreach($thongtinxes as $thongtinxe)
-                                <option value="{{ $thongtinxe->id }}">{{ $thongtinxe->loaixe }}</option>
-                            @endforeach
-                        </select>
+                        <input type="text" class="form-control" name="loaixe" placeholder="loại xe">
                         <label for="tenxe">Tên xe</label>
-                        <select class="form-control"  name="thongtinxe_id">
-                            @foreach($thongtinxes as $thongtinxe)
-                                <option value="{{ $thongtinxe->id }}">{{ $thongtinxe->tenxe }}</option>
-                            @endforeach
-                        </select>
+                        <input type="text" class="form-control" name="tenxe" placeholder="tên xe">
                         <label for="doixe">Đời xe</label>
-                        <select class="form-control"  name="thongtinxe_id">
-                        @foreach($thongtinxes as $thongtinxe)
-                            <option value="{{ $thongtinxe->id }}">{{ $thongtinxe->doixe }}</option>
-                        @endforeach
-                            </select>
+                        <input type="text" class="form-control" name="doixe" placeholder="đời xe">
                         <label for="mauxe">Mẫu xe</label>
-                        <select class="form-control"  name="thongtinxe_id">
-                            @foreach($thongtinxes as $thongtinxe)
-                                <option value="{{ $thongtinxe->id }}">{{ $thongtinxe->mauxe }}</option>
-                            @endforeach
-                        </select>
+                        <input type="text" class="form-control" name="mauxe" placeholder="mẫu xe">
+
                         <label for="mauxe">số khung</label>
-                        <select class="form-control" name="thongtinxe_id" >
-                            @foreach($thongtinxes as $thongtinxe)
-                                <option  value="{{ $thongtinxe->id }}">{{ $thongtinxe->sokhung }}
-                                </option>
-                            @endforeach
-                        </select>
+                        <input type="text" class="form-control" name="sokhung" placeholder="số khung">
+
                         <label for="mauxe">số máy</label>
-                        <select class="form-control" name="thongtinxe_id" >
-                            @foreach($thongtinxes as $thongtinxe)
-                                <option  value="{{ $thongtinxe->id }}">{{ $thongtinxe->somay }}
-                                </option>
-                            @endforeach
-                        </select>
+                        <input type="text" class="form-control" name="somay" placeholder="số máy">
+
                         <label for="nhacungcap">Nhà cung cấp</label>
-                        <input type="text" class="form-control"  name="nhacc">
+                        <input type="text" class="form-control"  name="nhacc" placeholder="nhà cung cấp">
+                        <label for="nhacungcap">Đăng kiểm</label>
+                        <input type="text" class="form-control"  name="dangkiem" placeholder="đăng kiểm">
                     </div>
                 </div>
                 <div class="col-6 col-sm-6">
@@ -76,23 +55,11 @@
                         <label for="nhacungcap">Ngày nhận</label>
                         <input type="date" class="form-control" name="ngaynhan" >
                         <label for="nguoinhan">Người nhận</label>
-                        <select class="form-control" name="nhanvien_id">
-                            @foreach($nhanviens as $nhanvien)
-                                <option value="{{ $nhanvien->id }}">{{ $nhanvien->nguoinhan }}</option>
-                            @endforeach
-                        </select>
+                        <input type="text" class="form-control" name="nguoinhan" placeholder="người nhận">
                         <label for="nguoi_tk">Người TK</label>
-                        <select class="form-control" name="nhanvien_id">
-                            @foreach($nhanviens as $nhanvien)
-                                <option value="{{ $nhanvien->id }}">{{ $nhanvien->nguoikt }}</option>
-                            @endforeach
-                        </select>
+                        <input type="text" class="form-control" name="" placeholder="người kiểm tra">
                         <label for="khonhan">Kho nhận</label>
-                        <select class="form-control" name="kho_id">
-                            @foreach($khos as $kho)
-                                <option value="{{ $kho->id }}">{{ $kho->dia_diem }}</option>
-                            @endforeach
-                        </select>
+                        <input type="text" class="form-control" name="khonhan" placeholder="kho nhận">
                         <label for="somay">Mã HD</label>
                         <input type="text" class="form-control" name="mahd" placeholder="mã HD">
                         <label for="somay">Ngày HD</label>
@@ -109,7 +76,7 @@
 
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">thêm</button>
-                <button type="file" name="file" class="btn btn-primary btn-sm " >NHẬP TỪ FILE</button>
+
 
             </div>
         </div>

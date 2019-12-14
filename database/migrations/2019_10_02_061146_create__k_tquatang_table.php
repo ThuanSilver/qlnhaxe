@@ -15,10 +15,10 @@ class CreateKTquatangTable extends Migration
     {
         Schema::create('KTquatang', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('quatang_id');
-            $table->dateTime('ngaynhan');
             $table->unsignedBigInteger('khachhang_id');
-            $table->unsignedBigInteger('thongtinxe_id');
+            $table->unsignedBigInteger('banxe_id');
+            $table->date('date');
+            $table->unsignedInteger('thongtinxe_id');
             $table->timestamps();
         });
     }

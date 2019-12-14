@@ -29,9 +29,9 @@ class nhanviencontroller extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nguoinhan' => 'required',
-            'nguoikt' => 'required',
-            'nhanvienbh' => 'required',
+            'name' => 'required',
+            'chucvu' => 'required',
+
 
         ]);
         nhanvien::create($request->all());
@@ -48,9 +48,8 @@ class nhanviencontroller extends Controller
     public function update(Request $request, nhanvien $nhanvien)
     {
         $request->validate([
-            'nguoinhan' => 'required',
-            'nguoikt' => 'required',
-            'nhanvienbh' => 'required',
+            'name' => 'required',
+            'chucvu' => 'required',
 
         ]);
         $nhanvien->update($request->all());

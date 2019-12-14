@@ -8,7 +8,7 @@ class thongtinxe extends Model
 {
     protected $table = 'thongtinxe';
     protected $fillable = [
-        'loaixe', 'tenxe','doixe','mauxe','sokhung','somay','status'
+        'loaixe', 'tenxe','doixe','mauxe','sokhung','somay','status','nhacc','dongxe','khonhan','khocuoi','baohanh','ngayquet'
     ];
     public function nhapxe(){
         return $this->hasMany('App\nhapxe', 'thongtinxe_id','id');

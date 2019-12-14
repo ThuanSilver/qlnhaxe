@@ -9,7 +9,7 @@
 
         <div class="col-lg-12 text-center" style="margin-top:10px;margin-bottom: 10px;">
             <a class="btn btn-success " href="{{ route('banxe.create') }}"> nhập xe</a>
-            <a class="btn btn-success " href="{{ route('banxe_xuat') }}"> xuất hóa đơn</a>
+
         </div>
     </div>
 
@@ -25,13 +25,12 @@
             <tr>
                 <th>stt</th>
                 <th>Loại xe </th>
-                <th>tên xe</th>
-                <th>đời xe</th>
-                <th>mẫu xe</th>
-                <th>số khung</th>
-                <th>số máy</th>
-                <th>tình trạng</th>
-                <th>giá bán</th>
+                <th>Tên xe</th>
+                <th>Mẫu xe</th>
+                <th>Số khung</th>
+                <th>Số máy</th>
+                <th>Tình trạng</th>
+                <th>Giá bán</th>
                 <th width="280px">More</th>
             </tr>
             </thead>
@@ -40,27 +39,16 @@
                     <td>{{ ++$i }}</td>
                     <td>{{ $banxe->thongtinxe->loaixe }}</td>
                     <td>{{ $banxe->thongtinxe->tenxe}}</td>
-                    <td>{{ $banxe->thongtinxe->doixe}}</td>
                     <td>{{ $banxe->thongtinxe->mauxe}}</td>
-                    <td>
-                        @if($banxe->status==0)
-                            {{ $banxe->thongtinxe->sokhung }}
-                        @else
-                            @endif
-                    </td>
+                    <td>{{ $banxe->thongtinxe->sokhung }} </td>
                     <td>{{ $banxe->thongtinxe->somay}}</td>
-                    <td>
-                        <input data-id="{{$banxe->id}}" class="toggle-class" type="checkbox" data-onstyle="success" data-offstyle="danger" data-toggle="toggle" data-on="đã bán" data-off="chưa bán" {{ $banxe->status ? 'checked' : '' }}>
-                    </td>
+                    <td>{{$banxe->tinhtrang}}</td>
                     <td>{{ $banxe->giaban}}</td>
-
                     <td>
                         @can('admin')
                         <form action="{{ route('banxe.destroy',$banxe->id) }}" method="POST">
-
-                            <a class="btn btn-info" href="{{ route('banxe_show',$banxe->id) }}">xem</a>
+                            <a href="{{ route('banxe.show',$banxe->id) }}"  class="btn btn-default"><i class="fa fa-print"></i> print </a>
                             <a class="btn btn-primary" href="{{ route('banxe.edit',$banxe->id) }}">sửa</a>
-                            <a href="" @click.prevent="printme" class="btn btn-default"><i class="fa fa-print"></i> in</a>
                             @csrf
                             @method('DELETE')
 
@@ -81,7 +69,8 @@
     {!! $banxes->links() !!}
 @endsection
 @section('custom_js')
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
     <script src="{{ asset('assets/admin/js/plugins/tables/datatables/datatables.min.js') }}"></script>
     <script>
         $(document).ready( function () {
@@ -104,7 +93,7 @@
             });
             $('.data-table').DataTable({
                 columnDefs: [{
-                    targets: [9],
+                    targets: [7],
                     searchable: false,
                     orderable: false,
                     visible: true
@@ -112,22 +101,5 @@
             });
         });
     </script>
-    <script lang='javascript'>
-        $(document).ready(function(){
-            $('#printPage').click(function(){
-                var data = '<input type="button" value="Print this page" onClick="window.print()">';
-                data += '<div id="div_print">';
-                data += $('#report').html();
-                data += '</div>';
 
-                myWindow=window.open('','','width=200,height=100');
-                myWindow.innerWidth = screen.width;
-                myWindow.innerHeight = screen.height;
-                myWindow.screenX = 0;
-                myWindow.screenY = 0;
-                myWindow.document.write(data);
-                myWindow.focus();
-            });
-        });
-    </script>
 @endsection

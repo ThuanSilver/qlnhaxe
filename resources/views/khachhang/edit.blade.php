@@ -30,7 +30,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>họ và tên:</strong>
-                    <input type="text" name="hovaten" value="{{ $khachhang->Hovaten }}" class="form-control" placeholder="họ và tên">
+                    <input type="text" name="name" value="{{ $khachhang->name }}" class="form-control" placeholder="họ và tên">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
@@ -48,7 +48,25 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>địa chỉ:</strong>
-                    <input type="text" name="diachi" value="{{ $khachhang->diachi }}" class="form-control" placeholder="địa chỉ">
+                    <input type="text" name="diachi" value="{{ $khachhang->phuong }}" class="form-control" placeholder="địa chỉ">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>phường:</strong>
+                    <input type="text" name="phuong" value="{{ $khachhang->diachi }}" class="form-control" placeholder="địa chỉ">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>thành phố:</strong>
+                    <input type="text" name="thanhpho" value="{{ $khachhang->thanhpho }}" class="form-control" placeholder="địa chỉ">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>tỉnh:</strong>
+                    <input type="text" name="tinh" value="{{ $khachhang->tinh }}" class="form-control" placeholder="địa chỉ">
                 </div>
             </div>
 

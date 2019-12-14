@@ -37,17 +37,22 @@
                 <th>ngày sinh</th>
                 <th>số điện thoại</th>
                 <th>địa chỉ</th>
+                <th>phường</th>
+                <th>thành phố</th>
+                <th>tỉnh</th>
                 <th width="280px">More</th>
             </tr>
             </thead>
             @foreach ($khachhangs as $khachhang)
                 <tr>
                     <td>{{ ++$i }}</td>
-                    <td>{{ $khachhang->Hovaten }}</td>
+                    <td>{{ $khachhang->name }}</td>
                     <td>{{ $khachhang->ngaysinh}}</td>
                     <td>{{ $khachhang->sdt}}</td>
                     <td>{{ $khachhang->diachi}}</td>
-
+                    <td>{{ $khachhang->phuong}}</td>
+                    <td>{{ $khachhang->thanhpho}}</td>
+                    <td>{{ $khachhang->tinh}}</td>
                     <td>
                         @can('admin')
                         <form action="{{ route('khachhang.destroy',$khachhang->id) }}" method="POST">

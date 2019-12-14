@@ -1,13 +1,15 @@
 @extends('xuatnoibo.layout')
+
 @section('content')
     <a href="{{ url('/home') }}">trang chủ</a>
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="text-center"> xuất nội bộ </h2>
+            <h2 class="text-center"> Xuất nội bộ</h2>
         </div>
+
         <div class="col-lg-12 text-center" style="margin-top:10px;margin-bottom: 10px;">
-            <a class="btn btn-success " href="{{ route('xuatnoibo.create') }}"> thêm </a>
-            <a class="btn btn-success " href="{{ route('banxe_xuatnoibo') }}"> xuất hóa đơn</a>
+            <a class="btn btn-success " href="{{ route('xuatnoibo.create') }}"> thêm</a>
+            <a class="btn btn-success " href="{{ route('banxe_xuatnoibo') }}"> xuất nội bộ</a>
         </div>
     </div>
 
@@ -21,41 +23,44 @@
         <table class="table table-bordered data-table">
             <thead>
             <tr>
-                <th>số máy </th>
-                <th>số khung</th>
-                <th>loại xe</th>
-                <th>màu xe</th>
-                <th>kho xuất</th>
-                <th>kho nhập</th>
-                <th>ngày xuất</th>
+                <th>stt</th>
+                <th>Số máy</th>
+                <th>Số khung</th>
+                <th>Loại xe</th>
+                <th>Màu xe</th>
+                <th>Kho xuất</th>
+                <th>Kho nhập</th>
+                <th>Ngày xuất</th>
+
+
                 <th width="280px">More</th>
             </tr>
             </thead>
             @foreach ($xuatnoibos as $xuatnoibo)
                 <tr>
-
+                    <td>{{ ++$i }}</td>
                     <td>{{ $xuatnoibo->thongtinxe->somay }}</td>
+                    <td>{{ $xuatnoibo->thongtinxe->sokhung }}</td>
+                    <td>{{ $xuatnoibo->thongtinxe->loaixe }}</td>
+                    <td>{{ $xuatnoibo->thongtinxe->mauxe }}</td>
+                    <td>{{ $xuatnoibo->kho->dia_diem }}</td>
+                    <td>{{ $xuatnoibo->kho->dia_diem }}</td>
+                    <td>{{ $xuatnoibo->ngayxuat }}</td>
                     <td>
-                            {{ $xuatnoibo->thongtinxe->sokhung}}
-                        </td>
-                    <td>{{ $xuatnoibo->thongtinxe->loaixe}}</td>
-                    <td>{{ $xuatnoibo->thongtinxe->mauxe}}</td>
+                        @can('admin')
+                            <form action="{{ route('xuatnoibo.destroy',$xuatnoibo->id) }}" method="POST">
 
-                    <td>{{ $xuatnoibo->kho->dia_diem}}</td>
-                    <td>{{ $xuatnoibo->kho->dia_diem}}</td>
-                    <td>{{ $xuatnoibo->ngayxuat }}
-                        <td>
-                            @can('admin')
-                        <form action="{{ route('xuatnoibo.destroy',$xuatnoibo->id) }}" method="POST">
-                            <a class="btn btn-info" href="{{ route('',$xuatnoibo->id) }}">xem</a>
-                            <a class="btn btn-primary" href="{{ route('xuatnoibo.edit',$xuatnoibo->id) }}">sửa</a>
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger">xóa</button>
-                        </form>
+                                <a class="btn btn-info" href="{{ route('xuatnoibo.show',$xuatnoibo->id) }}">xem</a>
+                                <a class="btn btn-primary" href="{{ route('xuatnoibo.edit',$xuatnoibo->id) }}">sửa</a>
 
-                    </td>
+                                @csrf
+                                @method('DELETE')
+
+                                <button type="submit" class="btn btn-danger">xóa</button>
+                            </form>
                         @endcan
+                    </td>
+
                 </tr>
             @endforeach
         </table>

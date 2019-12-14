@@ -12,9 +12,9 @@ class nhanvienimport implements ToModel
     public function model(array $row)
     {
         return new nhanvien([
-            'nguoinhan'     => $row[0],
-            'nguoikt'    => $row[1],
-            'nhanvienbh'    => $row[2],
+            'name'     => $row[0],
+            'chucvu'    => $row[1],
+
 
 
         ]);

@@ -13,8 +13,9 @@ class banxe extends Model
 {
     protected $table='banxe';
     protected $fillable = [
-         'giaban','duatruoc','conlai','status','Hovaten','ngaysinh','sdt','ngaymua','diachi','phuong','thanhpho',
-        'tinh','thongtinxe_id','kho_id','tragop_id','nhanvien_id','quatang_id'
+         'sohd','giaban','duatruoc','conlai','tinhtrang','khachhang_id',
+        'tinh','thongtinxe_id','kho_id','tragop_id','nhanvien_id','baohiem','uyquyen','lamvang',
+        'muabh','aomua','mockhoa','aotrumxe','balo','tiengop','ngaymua','tongthu'
     ];
     public function quatang(){
         return $this->belongsTo('App\quatang', 'quatang_id','id');
@@ -31,5 +32,12 @@ class banxe extends Model
     public function nhanvien(){
         return $this->belongsTo('App\nhanvien', 'nhanvien_id','id');
     }
+    public function khachhang (){
+        return $this->belongsTo('App\khachhang', 'khachhang_id','id');
+    }
+    public function ktquatang(){
+        return $this->hasMany('App\ktquatang', 'banxe_id','id');
+    }
+
 
 }

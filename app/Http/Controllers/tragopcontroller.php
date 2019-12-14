@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Imports\khachhangimport;
-use App\Imports\tragopimport;
+use App\Imports\nhapxeimport;
 use App\tragop;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -58,7 +58,7 @@ class tragopcontroller extends Controller
     }
     public function import()
     {
-        Excel::import(new tragopimport() ,request()->file('file'));
+        Excel::import(new nhapxeimport() ,request()->file('file'));
         return back();
     }
 }

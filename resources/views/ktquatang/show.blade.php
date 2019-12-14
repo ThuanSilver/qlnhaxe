@@ -15,19 +15,44 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>họ và tên:</strong>
-                {{ $ktquatang->khachhang->Hovaten }}
+                {{ $ktquatang->khachhang->name }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>quà tặng:</strong>
-                {{ $ktquatang->quatang->tenquatang }}
+                <strong>Mũ bh:</strong>
+                {{ $ktquatang->banxe->muabh }}
             </div>
         </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Áo mưa:</strong>
+                {{ $ktquatang->banxe->aomua }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Móc khóa:</strong>
+                {{ $ktquatang->banxe->mockhoa }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Áo trùm xe:</strong>
+                {{ $ktquatang->banxe->aotrumxe }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Balo:</strong>
+                {{ $ktquatang->banxe->balo }}
+            </div>
+        </div>
+
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>ngày nhận:</strong>
-                {{ $ktquatang->ngaynhan }}
+                {{ $ktquatang->date }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">

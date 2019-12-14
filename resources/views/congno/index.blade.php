@@ -23,31 +23,32 @@
             <tr>
                 <th>stt</th>
                 <th>tên khách hàng </th>
-                <th>giá bán </th>
-                <th>trả trước </th>
-                <th>trả lần 1 </th>
+                <th>Giá bán</th>
+                <th>Tiền trả lần 1 </th>
+                <th> ngày trả lần 1</th>
+                <th>tiền trả lần 2 </th>
+                <th> ngày trả lần 2</th>
                 <th>còn lại </th>
-                <th>tiền trả </th>
                 <th>tên xe </th>
                 <th>số khung </th>
-                <th>số máy </th>
+                <th>tiền nợ</th>
                 <th width="280px">More</th>
             </tr>
             </thead>
             @foreach ($congnos as $congno)
                 <tr>
-                    <td>{{ ++$i }}</td>
-                    <td>{{ $congno->khachhang->Hovaten}}</td>
-                    <td>{{ $congno->giaban}}</td>
-                    <td>{{ $congno->tratruoc}}</td>
-                    <td>{{ $congno->tralan1}}</td>
-                    <td>{{ $congno->conlai}}</td>
-                    <td>{{ $congno->tientra }}</td>
-                    <td>{{ $congno->thongtinxe->tenxe}}</td>
-                    <td>{{ $congno->thongtinxe->sokhung}}</td>
-                    <td>{{ $congno->thongtinxe->somay}}</td>
-
-
+                    @if($congno->tienno!=0)
+                        <td>{{ ++$i }}</td>
+                        <td>{{ $congno->khachhang->name}}</td>
+                        <td>{{ $congno->giaban}}</td>
+                        <td>{{ $congno->tralan1}}</td>
+                        <td>{{ $congno->date1}}</td>
+                        <td>{{ $congno->tralan2}}</td>
+                        <td>{{ $congno->date2}}</td>
+                        <td>{{$congno->conlai}}</td>
+                        <td>{{ $congno->thongtinxe->tenxe}}</td>
+                          <td>{{ $congno->thongtinxe->sokhung}}</td>
+                        <td>{{ $congno->tienno }}</td>
                     <td>
                         @can('admin')
                         <form action="{{ route('congno.destroy',$congno->id) }}" method="POST">
@@ -61,6 +62,8 @@
                             @endcan
                         </form>
                     </td>
+                        @else
+                    @endif
 
                 </tr>
             @endforeach

@@ -23,9 +23,16 @@ class CreateNhaxeTable extends Migration
             $table->date('ngayhd');
             $table->integer('maID');
             $table->integer('gianhap');
-            $table->unsignedBigInteger('kho_id');
-            $table->unsignedBigInteger('nhanvien_id');
-            $table->unsignedBigInteger('thongtinxe_id');
+            $table->string('loaixe');
+            $table->string('tenxe');
+            $table->string('doixe');
+            $table->string('mauxe');
+            $table->string('sokhung');
+            $table->string('somay');
+            $table->string('dangkiem');
+            $table->string('nguoinhan');
+            $table->string('khonhan');
+
 
             $table->timestamps();
         });

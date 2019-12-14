@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\banxe;
 use App\Imports\quatangimport;
 use App\thongtinxe;
 use App\ktquatang;
@@ -17,26 +18,21 @@ class ktquatangcontroller extends Controller
 
         return view('ktquatang.index',compact('ktquatangs'))->with('i', (request()->input('page', 1) - 1) * 10);
     }
-    public function search (Request $request){
-        $search =$request->get('search');
-        $nhapxes=DB::table('nhapxe')->where('thongtinxe_id','like','%'.$search.'%')->paginate(5);
-        return view('nhapxe.index',compact('nhapxes'))->with('i', (request()->input('page', 1) - 1) * 5);
 
-    }
     public function create()
     {
         $thongtinxes=thongtinxe::all();
         $khachhangs=khachhang::all();
-        $quatangs=quatang::all();
-        return view('ktquatang.create',compact('quatangs','khachhangs','thongtinxes'));
+        $banxes=banxe::all();
+        return view('ktquatang.create',compact('banxes','khachhangs','thongtinxes'));
     }
     public function store(Request $request)
     {
         $request->validate([
-            'ngaynhan' => 'required',
+            'date' => 'required',
             'thongtinxe_id' => 'required',
             'khachhang_id' => 'required',
-            'quatang_id' => 'required',
+            'banxe_id' => 'required',
         ]);
         ktquatang::create($request->all());
         return redirect()->route('ktquatang.index')->with('success','thêm thành công .');
@@ -49,16 +45,16 @@ class ktquatangcontroller extends Controller
     {
         $thongtinxes=thongtinxe::all();
         $khachhangs=khachhang::all();
-        $quatangs=quatang::all();
-        return view('ktquatang.edit',compact('ktquatang','khachhangs','thongtinxes','quatangs'));
+        $banxes=banxe::all();
+        return view('ktquatang.edit',compact('ktquatang','khachhangs','thongtinxes','banxes'));
     }
     public function update(Request $request, ktquatang $ktquatang)
     {
         $request->validate([
-            'ngaynhan' => 'required',
+            'date' => 'required',
             'thongtinxe_id' => 'required',
             'khachhang_id' => 'required',
-            'quatang_id' => 'required',
+            'banxe_id' => 'required',
         ]);
         $ktquatang->update($request->all());
         return redirect()->route('ktquatang.index')->with('success','sửa thành công.');

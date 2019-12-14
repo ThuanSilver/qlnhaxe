@@ -28,13 +28,13 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>họ và tên:</strong>
-                    <input type="text" name="hovaten" class="form-control" placeholder="họ và tên">
+                    <input type="text" name="name" class="form-control" placeholder="họ và tên">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>ngày sinh:</strong>
-                    <input type="text" name="ngaysinh" class="form-control" placeholder="ngày sinh">
+                    <input type="date" name="ngaysinh" class="form-control" placeholder="ngày sinh">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
@@ -47,6 +47,24 @@
                 <div class="form-group">
                     <strong>địa chỉ:</strong>
                     <input type="text" name="diachi" class="form-control" placeholder="địa chỉ">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>phường:</strong>
+                    <input type="text" name="phuong" class="form-control" placeholder="địa chỉ">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>thành phố:</strong>
+                    <input type="text" name="thanhpho" class="form-control" placeholder="địa chỉ">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>tinh:</strong>
+                    <input type="text" name="tinh" class="form-control" placeholder="địa chỉ">
                 </div>
             </div>
 

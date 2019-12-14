@@ -20,22 +20,32 @@
 
     @if(sizeof($ktquatangs) > 0)
         <table class="table table-bordered data-table">
+            <thead>
             <tr>
                 <th>stt</th>
                 <th>tên khách hàng </th>
-                <th>quà tặng</th>
+                <th>Mũ bảo hiểm</th>
+                <th>Áo mưa</th>
+                <th>Móc khóa</th>
+                <th>Áo trùm xe</th>
+                <th>Ba lô</th>
                 <th>ngày nhận</th>
                 <th>số máy</th>
                 <th>ngày sinh</th>
 
                 <th width="280px">More</th>
             </tr>
+            </thead>
             @foreach ($ktquatangs as $ktquatang)
                 <tr>
                     <td>{{ ++$i }}</td>
-                    <td>{{ $ktquatang->khachhang->Hovaten }}</td>
-                    <td>{{ $ktquatang->quatang->tenquatang}}</td>
-                    <td>{{ $ktquatang->ngaynhan}}</td>
+                    <td>{{ $ktquatang->khachhang->name }}</td>
+                    <td>{{ $ktquatang->banxe->muabh }}</td>
+                    <td>{{ $ktquatang->banxe->aomua }}</td>
+                    <td>{{ $ktquatang->banxe->mockhoa }}</td>
+                    <td>{{ $ktquatang->banxe->aotrumxe}}</td>
+                    <td>{{ $ktquatang->banxe->balo }}</td>
+                    <td>{{ $ktquatang->date}}</td>
                     <td>{{ $ktquatang->thongtinxe->somay}}</td>
                     <td>{{ $ktquatang->khachhang->ngaysinh }}</td>
 
@@ -88,7 +98,7 @@
             });
             $('.data-table').DataTable({
                 columnDefs: [{
-                    targets: [6],
+                    targets: [10],
                     searchable: false,
                     orderable: false,
                     visible: true

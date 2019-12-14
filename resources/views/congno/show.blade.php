@@ -15,31 +15,31 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>tên khách hàng :</strong>
-                {{ $congno->khachhang->Hovaten }}
+                {{ $congno->khachhang->name }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>ngày mua :</strong>
-                {{ $congno->ngaymua }}
+                <strong>tiền trả lần 1 :</strong>
+                {{ $congno->tientra1}}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>giá bán :</strong>
-                {{ $congno->giaban }}
+                <strong>ngày trả lần 1 :</strong>
+                {{ $congno->date1 }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>trả trước :</strong>
-                {{ $congno->tratruoc }}
+                <strong>tiền trả lần 2 :</strong>
+                {{ $congno->tientra2 }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>trả lần 1 :</strong>
-                {{ $congno->tralan1 }}
+                <strong>ngày trả lần 2 :</strong>
+                {{ $congno->date2 }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -48,12 +48,7 @@
                 {{ $congno->conlai }}
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>tiền trả :</strong>
-                {{ $congno->tientra }}
-            </div>
-        </div>
+
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>tên xe :</strong>
@@ -74,9 +69,10 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>ngày trả :</strong>
-                {{ $congno->ngaytra }}
+                <strong>tiền nợ :</strong>
+                {{ $congno->tienno}}
             </div>
         </div>
+
     </div>
 @endsection

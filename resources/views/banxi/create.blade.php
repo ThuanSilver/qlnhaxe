@@ -29,31 +29,31 @@
             <div class="col-sm-6">
 
                 <label for="somay">Số máy</label>
-                <select class="form-control" name="thongtinxe_id">
+                <select class="form-control" name="thongtinxe_id" id="nameid">
                     @foreach($thongtinxes as $thongtinxe)
                         <option value="{{ $thongtinxe->id }}">{{ $thongtinxe->somay }}</option>
                     @endforeach
                 </select>
                 <label for="sokhung">Số khung</label>
-                <select class="form-control" name="thongtinxe_id">
+                <select class="form-control" name="thongtinxe_id" id="nameid">
                     @foreach($thongtinxes as $thongtinxe)
                         <option value="{{ $thongtinxe->id }}">{{ $thongtinxe->sokhung }}</option>
                     @endforeach
                 </select>
                 <label for="loaixe">Loại xe</label>
-                <select class="form-control"  name="thongtinxe_id">
+                <select class="form-control"  name="thongtinxe_id" id="nameid">
                     @foreach($thongtinxes as $thongtinxe)
                         <option value="{{ $thongtinxe->id }}">{{ $thongtinxe->loaixe }}</option>
                     @endforeach
                 </select>
                 <label for="mauxe">Màu xe</label>
-                <select class="form-control" name="thongtinxe_id">
+                <select class="form-control" name="thongtinxe_id" id="nameid">
                     @foreach($thongtinxes as $thongtinxe)
                         <option value="{{ $thongtinxe->id }}">{{ $thongtinxe->mauxe }}</option>
                     @endforeach
                 </select>
                 <label for="doixe">Đời xe</label>
-                <select class="form-control" name="thongtinxe_id">
+                <select class="form-control" name="thongtinxe_id" id="nameid">
                     @foreach($thongtinxes as $thongtinxe)
                         <option value="{{ $thongtinxe->id }}">{{ $thongtinxe->doixe }}</option>
                     @endforeach
@@ -67,7 +67,7 @@
                     <label for="gianhap">Giá nhập</label>
                     <input type="text" class="form-control"  name="gianhap" >
                     <label for="khoxuat">Kho xuất</label>
-                    <select class="form-control" name="kho_id">
+                    <select class="form-control" name="kho_id" id="nameid">
                         @foreach($khos as $kho)
                             <option value="{{ $kho->id }}">{{ $kho->dia_diem }}</option>
                         @endforeach
@@ -93,4 +93,14 @@
 
 
     </form>
+@endsection
+@section('custom_js')
+    <script src="{{ asset('js/select2/select2.min.js') }}" defer></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#nameid').select2();
+        });
+    </script>
+
+
 @endsection

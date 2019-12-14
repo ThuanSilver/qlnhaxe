@@ -8,7 +8,7 @@
         <div class="card-body">
             <form action="{{ route('khoimport') }}" method="post" enctype="multipart/form-data">
                 @csrf
-                <input type="file" name="file" class="form-control">
+                <input type="file" name="file" placeholder="chọn file" class="form-control">
                 <br>
                 <button class="btn btn-success">nhập từ file</button>
             </form>

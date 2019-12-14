@@ -9,7 +9,7 @@ use App\thongtinxe;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Maatwebsite\Excel\Facades\Excel;
-use App\Imports\tragopimport;
+use App\Imports\nhapxeimport;
 class xecontroller extends Controller
 {
     public function index()
@@ -36,6 +36,10 @@ class xecontroller extends Controller
             'mauxe' => 'required',
             'sokhung' => 'required',
             'somay' => 'required',
+            'dongxe'=>'required',
+            'nhacc'=>'required',
+            'ngayquet'=>'required',
+
 
         ]);
         thongtinxe::create($request->all());
@@ -58,21 +62,30 @@ class xecontroller extends Controller
             'mauxe' => 'required',
             'sokhung' => 'required',
             'somay' => 'required',
-
+            'dongxe'=>'required',
+            'nhacc'=>'required',
+            'ngayquet'=>'required',
         ]);
         $thongtinxe->update($request->all());
         return redirect()->route('thongtinxe.index')->with('success','sửa thành công.');
     }
     public function destroy(thongtinxe $thongtinxe)
     {
-        $thongtinxe->delete();
 
+        $thongtinxe->delete();
         return redirect()->route('thongtinxe.index')->with('success','xóa thành công.');
     }
     public function changeStatus(Request $request)
     {
         $thongtinxe= thongtinxe::find($request->id);
         $thongtinxe->status = $request->status;
+        $thongtinxe->save();
+        return response()->json(['success'=>'Status change successfully.']);
+    }
+    public function changeBaohanh(Request $request)
+    {
+        $thongtinxe= thongtinxe::find($request->id);
+        $thongtinxe->baohanh = $request->baohanh;
         $thongtinxe->save();
         return response()->json(['success'=>'Status change successfully.']);
     }

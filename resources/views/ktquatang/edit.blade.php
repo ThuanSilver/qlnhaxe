@@ -26,68 +26,91 @@
         @csrf
         @method('PUT')
 
+
         <div class="row">
-            <!-- div ktquatang-->
 
-                <div class="col-sm-3"></div>
-                <div class=" col-sm-6">
-                    <div class="form-group">
-                        <label for="ten_kh">Tên khách hàng</label>
-                        <select class="form-control" id="ten_kh" name="khachhang_id">
-                            @foreach($khachhangs as $khachhang)
+            <!-- div KT_quatang-->
+            <div class="col-sm-3"></div>
+            <div class=" col-sm-6">
+                <div class="form-group">
+                    <label for="ten_kh">Tên khách hàng</label>
+                    <select class="form-control"  name="khachhang_id" id="name">
+                        @foreach($khachhangs as $khachhang)
+                            @if($ktquatang->khachhang->id == $khachhang->id)
+                                {{ 'selected' }}
+                            @endif
+                            <option value="{{ $khachhang->id }}">{{ $khachhang->name }}</option>
+                        @endforeach
+                    </select>
+                    <label for="ngaymua" class="ngaymua">Ngày nhận</label>
+                    <input type="date" class="form-control"  name="date" value="{{$ktquatang->date}}" >
+                    <label for="somay">Số máy</label>
+                    <select class="form-control"  name="thongtinxe_id" id="somay">
+                        @foreach($thongtinxes as $thongtinxe)
+                            @if($ktquatang->thongtinxe->id == $thongtinxe->id)
+                                {{ 'selected' }}
+                            @endif
+                            <option value="{{ $thongtinxe->id }}">{{ $thongtinxe->somay }}</option>
+                        @endforeach
+                    </select>
+                    <label for="ngaysinh">Ngày sinh</label>
+                    <select class="form-control"  name="khachhang_id" id="ngaysinh">
+                        @foreach($khachhangs as $khachhang)
+                            @if($ktquatang->khachhang->id == $khachhang->id)
+                                {{ 'selected' }}
+                            @endif
+                            <option value="{{ $khachhang->id }}">{{ $khachhang->ngaysinh }}</option>
+                        @endforeach
+                    </select>
 
-                                <option  @if($ktquatang->khachhang->id == $khachhang->id)
-                                               {{ 'selected' }}
-                                               @endif
-                                    value="{{ $khachhang->id }}">{{ $khachhang->Hovaten }}
-
-                                </option>
-                            @endforeach
-                        </select>
-
-                                <label class="form-check-label" for="inlineCheckbox1">Quà tặng :</label>
-                                <select class="form-control" id="ten_kh" name="quatang_id">
-                                    @foreach($quatangs as $quatang)
-                                        <option  @if($ktquatang->quatang->id ==$quatang->id)
-                                                 {{ 'selected' }}
-                                                 @endif
-                                            value="{{ $quatang->id }}">{{ $quatang->tenquatang }}
-
-                                        </option>
-                                    @endforeach
-                                </select>
-                            </div>
-
-                            <label for="ngaymua" class="ngaymua">Ngày nhận</label>
-                            <input type="date" class="form-control" id="ngaymua" name="ngaynhan" value="{{$ktquatang->ngaynhan}}" >
-                            <label for="somay">Số máy</label>
-                            <select class="form-control" id="ten_kh" name="thongtinxe_id">
-                                @foreach($thongtinxes as $thongtinxe)
-                                    <option  @if($ktquatang->thongtinxe->id == $thongtinxe->id)
-                                             {{ 'selected' }}
-                                             @endif
-                                        value="{{ $thongtinxe->id }}">{{ $thongtinxe->somay }}
-
-                                    </option>
-                                @endforeach
-                            </select>
-                            <label for="ngaysinh">Ngày sinh</label>
-                            <select class="form-control" id="ten_kh" name="khachhang_id">
-                                @foreach($khachhangs as $khachhang)
-                                    <option  @if($ktquatang->khachhang->id == $khachhang->id)
-                                             {{ 'selected' }}
-                                             @endif
-                                        value="{{ $khachhang->id }}">{{ $khachhang->ngaysinh }}
-                                    </option>
-                                @endforeach
-                            </select>
-
-                        </div>
-                    </div>
-                    <div class="col-sm-3"></div>
+                    <label for="ngaysinh">Mũ Bảo hiểm</label>
+                    <select class="form-control"  name="banxe_id" id="muabh">
+                        @foreach($banxes as $banxe)
+                            @if($ktquatang->banxe->id == $banxe->id)
+                                {{ 'selected' }}
+                            @endif
+                            <option value="{{ $banxe->id }}">{{ $banxe->muabh }}</option>
+                        @endforeach
+                    </select>
+                    <label for="ngaysinh">Áo mưa</label>
+                    <select class="form-control"  name="banxe_id" id="aomua">
+                        @foreach($banxes as $banxe)
+                            @if($ktquatang->banxe->id == $banxe->id)
+                                {{ 'selected' }}
+                            @endif
+                            <option value="{{ $banxe->id }}">{{ $banxe->aomua }}</option>
+                        @endforeach
+                    </select>
+                    <label for="ngaysinh">Móc khóa</label>
+                    <select class="form-control"  name="banxe_id" id="mockhoa">
+                        @foreach($banxes as $banxe)
+                            @if($ktquatang->banxe->id == $banxe->id)
+                                {{ 'selected' }}
+                            @endif
+                            <option value="{{ $banxe->id }}">{{ $banxe->mockhoa }}</option>
+                        @endforeach
+                    </select>
+                    <label for="ngaysinh">Áo trùm xe</label>
+                    <select class="form-control"  name="banxe_id" id="aotrumxe">
+                        @foreach($banxes as $banxe)
+                            @if($ktquatang->banxe->id == $banxe->id)
+                                {{ 'selected' }}
+                            @endif
+                            <option value="{{ $banxe->id }}">{{ $banxe->aotrumxe }}</option>
+                        @endforeach
+                    </select>
+                    <label for="ngaysinh">BaLo</label>
+                    <select class="form-control"  name="banxe_id" id="balo">
+                        @foreach($banxes as $banxe)
+                            @if($ktquatang->banxe->id == $banxe->id)
+                                {{ 'selected' }}
+                            @endif
+                            <option value="{{ $banxe->id }}">{{ $banxe->balo }}</option>
+                        @endforeach
+                    </select>
                 </div>
             </div>
-            <!-- end ktquatang-->
+
 
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">cập nhập</button>

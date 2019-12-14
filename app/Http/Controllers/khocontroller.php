@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Imports\khachhangimport;
+use App\Imports\khoimport;
 use  App\kho;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -15,12 +16,7 @@ class khocontroller extends Controller
 
         return view('kho.index',compact('khos'))->with('i', (request()->input('page', 1) - 1) * 10);
     }
-    public function search (Request $request){
-        $search =$request->get('search');
-        $khos=DB::table('kho')->where('name','like','%'.$search.'%')->paginate(5);
-        return view('kho.index',compact('khos'))->with('i', (request()->input('page', 1) - 1) * 5);
 
-    }
     public function create()
     {
         return view('kho.create');
@@ -59,7 +55,7 @@ class khocontroller extends Controller
     }
     public function import()
     {
-        Excel::import(new khachhangimport() ,request()->file('file'));
+        Excel::import(new khoimport() ,request()->file('file'));
         return back();
     }
 }

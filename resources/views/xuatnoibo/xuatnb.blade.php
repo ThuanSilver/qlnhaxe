@@ -2,9 +2,9 @@
 
 @section('content')
     <div class="container">
-        <div class="row mt-5 text">
+        <div class="">
             <div class="col-sm-12">
-                <h3 class="text-uppercase text-center alert alert-primary"> HÓA ĐƠN XUẤT KHO NỘI BỘ </h3>
+                <h3 class="text-uppercase text-center alert alert-primary"> HÓA ĐƠN XUẤT KHO bán sĩ </h3>
             </div>
             <div class="row">
                 <div class="col-sm-12">
@@ -21,11 +21,11 @@
                         </form>
                         <form class="form-inline xuat_inline ">
                             <div class="form-group">
-                                <label for="exampleInputName3" class="text-uppercase ">từ kho : </label>
-                                <input type="text" class="form-control tukho" name="exampleInputName2" id="exampleInputName2" placeholder="Jane Doe">
+                                <label for="exampleInputEmail4" class="denkho_bx">TỪ KHO :</label>
+                                <input type="text" class="form-control" name="exampleInputEmail2" id="exampleInputEmail2">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputEmail4" class="denkho">ĐẾN KHO :</label>
+                                <label for="exampleInputEmail4" class="denkho_bx">ĐẾN KHO :</label>
                                 <input type="text" class="form-control" name="exampleInputEmail2" id="exampleInputEmail2">
                             </div>
                             <div id='app'>
@@ -36,54 +36,54 @@
                 </div>
             </div> <!-- hết row ngày xuất bán lẻ -->
             <div class="row mt-3">
-                <div class="col-sm-12">
-                    <div class="table_xuatnb">
-                        <table class="table table-bordered text-uppercase">
+                <div class="col-sm-19">
+                    <div class="">
+                        <table class="table table-bordered table-hover text-uppercase">
                             <thead class=" text-uppercase">
                             <tr>
                                 <th scope="col">stt</th>
-                                <td scope="col">loại xe</td>
-                                <td scope="col">màu xe</td>
-                                <td scope="col">số khung</td>
-                                <td scope="col">số máy</td>
+                                <th scope="col">loại xe</th>
+                                <th scope="col">màu xe</th>
+                                <th scope="col">số khung</th>
+                                <th scope="col">số máy</th>
+                                <th scope="col">giá bán</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>trắng nâu xanh</td>
-                                <td>@11111111111111</td>
-                                <td>mks022s345566778</td>
+
+                                <button class="btn btn-success" id="hdxuatnb"> + Thêm cột</button>
                             </tr>
+
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div> <!-- hết row bảng xuất hóa đơn bán lẻ -->
-            <div class="kiten_banle">
+            <div class="">
                 <form>
                     <div class="form-row">
                         <div class="col pr-5">
-                            <label for="" class="text-uppercase">nhân viên bán</label>
-                            <input type="text" class="form-control" placeholder="Nhân viên bán">
+                            <label for="" class="text-uppercase lb_nv">Người xuất</label>
+
                         </div>
                         <div class="col">
-                            <label for="" class="text-uppercase">TÀI XẾ</label>
-                            <input type="text" class="form-control" placeholder="tài xế">
+                            <label for="" class="text-uppercase lb_ql">Tài xế</label>
+
                         </div>
-                        <div class="col">
-                            <label for="" class="text-uppercase">QUẢN LÍ</label>
-                            <input type="text" class="form-control" placeholder="Quản lí">
+                        <div class="col ">
+                            <label for="" class="text-uppercase lb_nn">Quản lí</label>
+
                         </div>
-                        <div class="col">
-                            <label for="" class="text-uppercase">NGƯỜI NHẬN</label>
-                            <input type="text" class="form-control" placeholder="người nhận">
+                        <div class="col ">
+                            <label for="" class="text-uppercase lb_nnnoibo">Người nhận</label>
+
                         </div>
                     </div>
                 </form>
             </div>
         </div>
+
     </div>
 @endsection
 @section('custom_js')
@@ -136,4 +136,22 @@
             });
         });
     </script>
+            <script src="{{ asset('js/app.js') }}" defer></script>
+
+            <script>
+                $(document).ready(function () {
+                    $('#hdxuatnb').click(function (event) {
+                        var addcontrol = "<tr>"
+                        /* Act on the event */
+                        addcontrol += "<td ><input type='text' ></td>"
+                        addcontrol += "<td><input type='text'  id='newrow'></td>"
+                        addcontrol += "<td><input type='text'  id='newrow'></td>"
+                        addcontrol += "<td><input type='text'  id='newrow'></td>"
+                        addcontrol += "<td><input type='text'  id='newrow'></td>"
+                        addcontrol += "<td><input type='text'  id='newrow'></td>"
+                        addcontrol += "</tr>";
+                        $(" table tbody").append(addcontrol);
+                    });
+                });
+            </script>
 @endsection

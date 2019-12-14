@@ -14,22 +14,23 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>người nhận:</strong>
-                {{ $nhanvien->nguoinhan }}
+                <strong>Tên nhân viên:</strong>
+                {{ $nhanvien->name }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>người kiểm tra:</strong>
-                {{ $nhanvien->nguoikt }}
+                <strong>chức vụ:</strong>
+                {{ $nhanvien->chucvu }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>nhân viên bảo hiểm:</strong>
-                {{ $nhanvien->nhanvienbh }}
+                <strong>số điện thoại:</strong>
+                {{ $nhanvien->sdt}}
             </div>
         </div>
+
 
 
     </div>

@@ -29,7 +29,7 @@
 
 
                 <label for="somay">Số máy</label>
-                <select class="form-control" name="thongtinxe_id" >
+                <select class="form-control" name="thongtinxe_id" id="nameid" >
                     @foreach($thongtinxes as $thongtinxe)
                         <option
 
@@ -38,7 +38,7 @@
                     @endforeach
                 </select>
                 <label for="sokhung">Số khung</label>
-                <select class="form-control" name="thongtinxe_id" >
+                <select class="form-control" name="thongtinxe_id" id="nameid" >
                     @foreach($thongtinxes as $thongtinxe)
                         <option
 
@@ -47,7 +47,7 @@
                     @endforeach
                 </select>
                 <label for="loaixe">Loại xe</label>
-                <select class="form-control" name="thongtinxe_id" >
+                <select class="form-control" name="thongtinxe_id" id="nameid" >
                     @foreach($thongtinxes as $thongtinxe)
                         <option
 
@@ -56,7 +56,7 @@
                     @endforeach
                 </select>
                 <label for="mauxe">Màu xe</label>
-                <select class="form-control" name="thongtinxe_id" >
+                <select class="form-control" name="thongtinxe_id" id="nameid" >
                     @foreach($thongtinxes as $thongtinxe)
 
                         <option
@@ -65,7 +65,7 @@
                     @endforeach
                 </select>
                 <label for="tinhtrang">Tình trạng</label>
-                <input type="text" class="form-control" name="tinhtrang" >
+                <input type="text" class="form-control" name="tinhtrang"  >
                 <label for="khoxuat">Kho xuất</label>
                 <select class="form-control" name="kho_id" >
                     @foreach($khos as $kho)
@@ -74,7 +74,7 @@
                     @endforeach
                 </select>
                 <label for="khonhap">Kho Nhập</label>
-                <select class="form-control" name="kho_id" >
+                <select class="form-control" name="kho_id"  id="nameid">
                     @foreach($khos as $kho)
                         <option  value="{{ $kho->id }}">{{ $kho->dia_diem }}
                         </option>
@@ -91,4 +91,12 @@
 
 
     </form>
+@endsection
+@section('custom_js')
+    <script src="{{ asset('js/select2/select2.min.js') }}" defer></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#nameid').select2();
+        });
+    </script>
 @endsection
