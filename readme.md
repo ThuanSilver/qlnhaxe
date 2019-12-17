@@ -59,9 +59,10 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 - [Abdel Elrafa](https://abdelelrafa.com)
 - [Hyper Host](https://hyper.host)
 
-## Contributing
+## Các chức năng
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Nhập xuất tìm kiếm xe ra vào kho, xe đã bán, thông tin khách hàng và trả góp ( dành cho nhân viên ),Thông báo nếu đến sinh nhật khách hàng để Cty trích quà tặng cho khách hàng.Có 1 trang New để In ra cái hoá đơn trong ngày để chủ dễ dàng xem được
+Dịch vụ: Trò chuyện trực tiếp để hỗ trợ khách hàng
 
 ## Security Vulnerabilities
 
