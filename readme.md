@@ -14,7 +14,7 @@
 - Có 1 trang New để In ra cái hoá đơn trong ngày để chủ dễ dàng xem được.
 - Trò chuyện trực tiếp để hỗ trợ khách hàng.
 #Ứng dụng
-- đã up lên hosting với tên miền là [hondatu2.com] (https://hondatu2.com)
+- đã up lên hosting với tên miền là [hondatu2.com](https://hondatu2.com)
 
 .
 
