@@ -61,10 +61,36 @@
                     <input type="text" name="somay" class="form-control" placeholder="số máy">
                 </div>
             </div>
-
-
-
-
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Dòng xe:</strong>
+                    <input type="text" name="dongxe" class="form-control" placeholder="dòng xe">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Nhà cung cấp:</strong>
+                    <input type="text" name="nhacc" class="form-control" placeholder="nhà cung cấp">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Ngày quét bảo hành:</strong>
+                    <input type="date" name="ngayquet" class="form-control" placeholder="ngày quét bảo hành">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Kho nhận:</strong>
+                    <input type="text" name="khonhan" class="form-control" placeholder="kho nhận">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Kho cuối:</strong>
+                    <input type="text" name="khocuoi" class="form-control" placeholder="kho cuối">
+                </div>
+            </div>
 
         </div>
 

@@ -8,10 +8,13 @@ use Illuminate\Http\Request;
 
 class khophukiencontroller extends Controller
 {
+<<<<<<< HEAD
     public function __construct()
     {
         $this->middleware('auth');
     }
+=======
+>>>>>>> c37523de6264fb2cc904a426aaf25d10f2cfc900
     public function index()
     {
         $khophukiens = khophukien::latest()->paginate(10);
@@ -64,4 +67,8 @@ class khophukiencontroller extends Controller
         $khophukien->delete();
         return redirect()->route('khophukien.index')->with('success','xóa thành công.');
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c37523de6264fb2cc904a426aaf25d10f2cfc900

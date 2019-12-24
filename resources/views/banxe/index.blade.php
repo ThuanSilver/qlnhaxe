@@ -37,11 +37,19 @@
             @foreach ($banxes as $banxe)
                 <tr>
                     <td>{{ ++$i }}</td>
+<<<<<<< HEAD
                   
                     <td>{{ $banxe->thongtinxe['tenxe']}}</td>
                     <td>{{ $banxe->thongtinxe['mauxe']}}</td>
                     <td>{{ $banxe->thongtinxe['sokhung'] }} </td>
                     <td>{{ $banxe->thongtinxe['somay']}}</td>
+=======
+                    <td>{{ $banxe->thongtinxe->loaixe }}</td>
+                    <td>{{ $banxe->thongtinxe->tenxe}}</td>
+                    <td>{{ $banxe->thongtinxe->mauxe}}</td>
+                    <td>{{ $banxe->thongtinxe->sokhung }} </td>
+                    <td>{{ $banxe->thongtinxe->somay}}</td>
+>>>>>>> c37523de6264fb2cc904a426aaf25d10f2cfc900
                     <td>{{$banxe->tinhtrang}}</td>
                     <td>{{ $banxe->giaban}}</td>
                     <td>

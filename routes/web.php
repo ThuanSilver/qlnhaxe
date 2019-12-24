@@ -66,11 +66,19 @@ Route::get('/search', 'banxicontroller@search');
 Route::get('changeStatus2', 'banxicontroller@changeStatus');
 Route::get('hoadonbanxi', 'banxicontroller@xuathdbanxi')->name('banxe_xuatxi');
 
+<<<<<<< HEAD
 Route::resource('banxe','banxecontroller');
 Route::get('changeStatus1', 'banxecontroller@changeStatus1');
 Route::get('search', 'banxecontroller@search')->name('cities.search');
 Route::get('searchbanxe', 'banxecontroller@searchSokhung')->name('sokhung.search');
 Route::post('getbanxe', 'banxecontroller@selectAjax')->name('getbanxe');
+=======
+Route::resource('banxe','banxeController');
+Route::get('changeStatus1', 'banxeController@changeStatus1');
+Route::get('search', 'banxeController@search')->name('cities.search');
+Route::get('searchbanxe', 'banxeController@searchSokhung')->name('sokhung.search');
+Route::post('getbanxe', 'banxeController@selectsokhung')->name('getbanxe');
+>>>>>>> c37523de6264fb2cc904a426aaf25d10f2cfc900
 
 Route::get('show/{id}', 'banxecontroller@show')->name('banxe_show');
 Route::get('hoadonbanxe', 'banxecontroller@xuathdbanle')->name('banxe_xuat');
@@ -79,6 +87,12 @@ Route::resource('chi','chicontroller');
 
 Route::resource('thungoai','thungoaicontroller');
 
+<<<<<<< HEAD
 Route::resource('banphukien','banphukiencontroller');
 
 Route::resource('khophukien','khophukiencontroller');
+=======
+Route::resource('banphukien','banphukienController');
+
+Route::resource('khophukien','khophukienController');
+>>>>>>> c37523de6264fb2cc904a426aaf25d10f2cfc900

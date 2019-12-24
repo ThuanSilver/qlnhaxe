@@ -1,9 +1,9 @@
 @extends('thongtinxe.layout')
 @section('content')
-    <a href="{{ url('/home') }}">trang chủ</a>
+    <a href="{{ url('/home') }}">TRANG CHỦ</a>
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="text-center">thông tin xe </h2>
+            <h2 class="text-center">Thông tin xe </h2>
         </div>
         <div class="card-body">
             <form action="{{ route('ximport') }}" method="post" enctype="multipart/form-data">
@@ -14,7 +14,7 @@
             </form>
         </div>
         <div class="col-lg-12 text-center" style="margin-top:10px;margin-bottom: 10px;">
-            <a class="btn btn-success " href="{{ route('thongtinxe.create') }}"> thêm  xe</a>
+            <a class="btn btn-success " href="{{ route('thongtinxe.create') }}"> Thêm  xe</a>
         </div>
     </div>
 
@@ -29,13 +29,15 @@
             <thead>
             <tr>
                 <th>stt</th>
-                <th>loại xe </th>
-                <th>tên xe</th>
-                <th>đời xe </th>
-                <th>mẫu xe </th>
-                <th>số khung </th>
-                <th>số máy </th>
-                <th>tình trạng </th>
+                <th>Loại xe </th>
+                <th>Tên xe</th>
+                <th>Đời xe </th>
+                <th>Mẫu xe </th>
+                <th>Số khung </th>
+                <th>Số máy </th>
+                <th>Tình trạng </th>
+                <th>Quét bảo hành </th>
+                <th>Ngày quét </th>
                 <th width="280px">More</th>
             </tr>
             </thead>
@@ -56,6 +58,7 @@
                     <td>
                         <input data-id="{{$thongtinxe->id}}" class="toggle-class" type="checkbox" name="baohanh" data-onstyle="success" data-offstyle="danger" data-toggle="toggle" data-on="đã quét" data-off="chưa quyét" {{ $thongtinxe->baohanh ? 'checked' : '' }}>
                     </td>
+                    <td>{{ $thongtinxe->ngayquet}}</td>
                     <td>
                         @can('admin')
                         <form action="{{ route('thongtinxe.destroy',$thongtinxe->id) }}" method="POST">

@@ -61,6 +61,36 @@
                     <input type="text" name="mauxe" value="{{ $thongtinxe->mauxe }}" class="form-control" placeholder="mẫu xe">
                 </div>
             </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Dòng xe:</strong>
+                    <input type="text" name="dongxe" value="{{ $thongtinxe->dongxe }}" class="form-control" placeholder="dòng xe">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Nhà cung cấp:</strong>
+                    <input type="text" name="nhacc" value="{{ $thongtinxe->nhacc }}" class="form-control" placeholder="nhà cung cấp">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Ngày quét bảo hành:</strong>
+                    <input type="text" name="ngayquet" value="{{ $thongtinxe->ngayquet }}" class="form-control" placeholder="ngày quét bảo hành">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Kho nhận:</strong>
+                    <input type="text" name="khonhan" value="{{ $thongtinxe->khonhan }}" class="form-control" placeholder="ngày quét bảo hành">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Kho cuối:</strong>
+                    <input type="text" name="khocuoi" value="{{ $thongtinxe->khocuoi }}" class="form-control" placeholder="ngày quét bảo hành">
+                </div>
+            </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">cập nhập</button>
