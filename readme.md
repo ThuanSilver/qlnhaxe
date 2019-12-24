@@ -13,7 +13,7 @@
 - Thông báo nếu đến sinh nhật khách hàng để Cty trích quà tặng cho khách hàng.
 - Có 1 trang New để In ra cái hoá đơn trong ngày để chủ dễ dàng xem được.
 - Trò chuyện trực tiếp để hỗ trợ khách hàng.
-#Ứng dụng
+#Công dụng
 - đã up lên hosting với tên miền là [hondatu2.com](https://hondatu2.com)
 
 .
