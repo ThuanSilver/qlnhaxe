@@ -25,27 +25,23 @@
             <tr>
                 <th>stt</th>
                 <th>Loại xe </th>
-                <th>tên xe</th>
-                <th>mẫu xe</th>
-                <th>số khung</th>
-
-                <th>số máy</th>
-                <th>tình trạng</th>
-                <th>giá bán</th>
+                <th>Tên xe</th>
+                <th>Mẫu xe</th>
+                <th>Số khung</th>
+                <th>Số máy</th>
+                <th>Tình trạng</th>
+                <th>Giá bán</th>
                 <th width="280px">More</th>
             </tr>
             </thead>
             @foreach ($banxes as $banxe)
                 <tr>
                     <td>{{ ++$i }}</td>
-                    <td>{{ $banxe->thongtinxe->loaixe }}</td>
-                    <td>{{ $banxe->thongtinxe->tenxe}}</td>
-                    <td>{{ $banxe->thongtinxe->mauxe}}</td>
-                    <td>
-                            {{ $banxe->thongtinxe->sokhung }}
-                    </td>
-
-                    <td>{{ $banxe->thongtinxe->somay}}</td>
+                  
+                    <td>{{ $banxe->thongtinxe['tenxe']}}</td>
+                    <td>{{ $banxe->thongtinxe['mauxe']}}</td>
+                    <td>{{ $banxe->thongtinxe['sokhung'] }} </td>
+                    <td>{{ $banxe->thongtinxe['somay']}}</td>
                     <td>{{$banxe->tinhtrang}}</td>
                     <td>{{ $banxe->giaban}}</td>
                     <td>

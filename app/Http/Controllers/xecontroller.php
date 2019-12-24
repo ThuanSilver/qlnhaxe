@@ -12,6 +12,10 @@ use Maatwebsite\Excel\Facades\Excel;
 use App\Imports\nhapxeimport;
 class xecontroller extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $thongtinxes = thongtinxe::latest()->paginate(10);

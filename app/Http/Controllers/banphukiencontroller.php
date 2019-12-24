@@ -1,54 +1,60 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\banphukien;
 
-use App\thungoai;
 use Illuminate\Http\Request;
 
 class banphukiencontroller extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
-        $thungoais = thungoai::latest()->paginate(10);
+        $banphukiens = banphukien::latest()->paginate(10);
 
-        return view('thungoai.index',compact('thungoais'))->with('i', (request()->input('page', 1) - 1) * 10);
+        return view('banphukien.index',compact('banphukiens'))->with('i', (request()->input('page', 1) - 1) * 10);
     }
 
     public function create()
     {
-        return view('thungoai.create');
+        return view('banphukien.create');
     }
     public function store(Request $request)
     {
         $request->validate([
-                'ngaythu' => 'required',
-                'loaithu' => 'required',
-                'tienthu' => 'required',
-                'ghichu' => 'required',
+                'ngayban' => 'required',
+                'somay' => 'required',
+                'soluong' => 'required',
+                'gia' => 'required',
+                'tongtien' => 'required',
             ]
         );
-        thungoai::create($request->all());
-        return redirect()->route('thungoai.index')->with('success','thêm thành công .');
+        banphukien::create($request->all());
+        return redirect()->route('banphukien.index')->with('success','thêm thành công .');
     }
 
-    public function edit(thungoai $thungoai)
+    public function edit(banphukien $banphukien)
     {
-        return view('thungoai.edit',compact('thungoai'));
+        return view('banphukien.edit',compact('banphukien'));
     }
-    public function update(Request $request, thungoai $thungoai)
+    public function update(Request $request, banphukien $banphukien)
     {
         $request->validate([
-            'ngaythu' => 'required',
-            'loaithu' => 'required',
-            'tienthu' => 'required',
-            'ghichu' => 'required',
+            'ngayban' => 'required',
+            'somay' => 'required',
+            'soluong' => 'required',
+            'gia' => 'required',
+            'tongtien' => 'required',
         ]);
-        $thungoai->update($request->all());
-        return redirect()->route('thungoai.index')->with('success','sửa thành công.');
+        $banphukien->update($request->all());
+        return redirect()->route('banphukien.index')->with('success','sửa thành công.');
     }
-    public function destroy(thungoai $thungoai)
+    public function destroy(banphukien $banphukien)
     {
-        $thungoai->delete();
-        return redirect()->route('thungoai.index')->with('success','xóa thành công.');
+        $banphukien->delete();
+        return redirect()->route('banphukien.index')->with('success','xóa thành công.');
     }
 }

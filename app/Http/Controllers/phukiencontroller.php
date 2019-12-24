@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class phukiencontroller extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $phukiens = phukien::latest()->paginate(10);

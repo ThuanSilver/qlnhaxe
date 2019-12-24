@@ -13,6 +13,10 @@ use App\Imports\nhapxeimport;
 
 class nhapxecontroller extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $nhapxes = nhapxe::latest()->paginate(10);

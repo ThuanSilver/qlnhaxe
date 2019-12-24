@@ -39,15 +39,15 @@
             @foreach ($ktquatangs as $ktquatang)
                 <tr>
                     <td>{{ ++$i }}</td>
-                    <td>{{ $ktquatang->khachhang->name }}</td>
-                    <td>{{ $ktquatang->banxe->muabh }}</td>
-                    <td>{{ $ktquatang->banxe->aomua }}</td>
-                    <td>{{ $ktquatang->banxe->mockhoa }}</td>
-                    <td>{{ $ktquatang->banxe->aotrumxe}}</td>
-                    <td>{{ $ktquatang->banxe->balo }}</td>
+                    <td>{{ $ktquatang->khachhang['name'] }}</td>
+                    <td>{{ $ktquatang->banxe['muabh'] }}</td>
+                    <td>{{ $ktquatang->banxe['aomua'] }}</td>
+                    <td>{{ $ktquatang->banxe['mockhoa'] }}</td>
+                    <td>{{ $ktquatang->banxe['aotrumxe']}}</td>
+                    <td>{{ $ktquatang->banxe['balo'] }}</td>
                     <td>{{ $ktquatang->date}}</td>
-                    <td>{{ $ktquatang->thongtinxe->somay}}</td>
-                    <td>{{ $ktquatang->khachhang->ngaysinh }}</td>
+                    <td>{{ $ktquatang->thongtinxe['somay']}}</td>
+                    <td>{{ $ktquatang->khachhang['ngaysinh'] }}</td>
 
                     <td>
                         @can('admin')

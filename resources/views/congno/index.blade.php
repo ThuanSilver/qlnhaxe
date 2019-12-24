@@ -39,15 +39,15 @@
                 <tr>
                     @if($congno->tienno!=0)
                         <td>{{ ++$i }}</td>
-                        <td>{{ $congno->khachhang->name}}</td>
+                        <td>{{ $congno->khachhang['name']}}</td>
                         <td>{{ $congno->giaban}}</td>
                         <td>{{ $congno->tralan1}}</td>
                         <td>{{ $congno->date1}}</td>
                         <td>{{ $congno->tralan2}}</td>
                         <td>{{ $congno->date2}}</td>
                         <td>{{$congno->conlai}}</td>
-                        <td>{{ $congno->thongtinxe->tenxe}}</td>
-                          <td>{{ $congno->thongtinxe->sokhung}}</td>
+                        <td>{{ $congno->thongtinxe['tenxe']}}</td>
+                          <td>{{ $congno->thongtinxe['sokhung']}}</td>
                         <td>{{ $congno->tienno }}</td>
                     <td>
                         @can('admin')

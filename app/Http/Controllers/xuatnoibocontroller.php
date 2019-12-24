@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\DB;
 use Maatwebsite\Excel\Concerns\FromView;
 class xuatnoibocontroller extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index(Request $request)
     {
 

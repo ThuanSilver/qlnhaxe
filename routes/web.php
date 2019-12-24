@@ -20,63 +20,65 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/search', 'khachhangController@search');
-Route::resource('khachhang','khachhangController');
-Route::post('kimport', 'khachhangController@import')->name('kimport');
+Route::get('/search', 'khachhangcontroller@search');
+Route::resource('khachhang','khachhangcontroller');
+Route::post('kimport', 'khachhangcontroller@import')->name('kimport');
 
-Route::resource('nhanvien','nhanvienController');
-Route::get('/search', 'nhanvienController@search');
-Route::post('nimport', 'nhanvienController@import')->name('nimport');
+Route::resource('nhanvien','nhanviencontroller');
+Route::get('/search', 'nhanviencontroller@search');
+Route::post('nimport', 'nhanviencontroller@import')->name('nimport');
 
-Route::resource('kho','khoController');
-Route::get('/search', 'khoController@search');
-Route::post('khoimport', 'khoController@import')->name('khoimport');
+Route::resource('kho','khocontroller');
+Route::get('/search', 'khocontroller@search');
+Route::post('khoimport', 'khocontroller@import')->name('khoimport');
 
-Route::resource('thongtinxe','xeController');
-Route::get('/search', 'xeController@search');
-Route::get('changeStatus', 'xeController@changeStatus');
-Route::get('changeBaohanh', 'xeController@changebaohanh');
-Route::post('ximport', 'xeController@import')->name('ximport');
+Route::resource('thongtinxe','xecontroller');
+Route::get('/search', 'xecontroller@search');
+Route::get('changeStatus', 'xecontroller@changeStatus');
+Route::get('changeBaohanh', 'xecontroller@changebaohanh');
+Route::post('ximport', 'xecontroller@import')->name('ximport');
 
-Route::resource('quatang','quatangController');
-Route::get('/search', 'quatangController@search');
-Route::post('qimport', 'quatangController@import')->name('qimport');
+Route::resource('quatang','quatangcontroller');
+Route::get('/search', 'quatangcontroller@search');
+Route::post('qimport', 'quatangcontroller@import')->name('qimport');
 
-Route::resource('tragop','tragopController');
+Route::resource('tragop','tragopcontroller');
 Route::get('/search', 'tragopController@search');
 Route::post('timport', 'tragopController@import')->name('timport');
 
-Route::resource('nhapxe','nhapxeController');
-Route::get('/search', 'nhapxeController@search');
-Route::post('nhapxeimport', 'nhapxeController@import')->name('nhapxeimport');
+Route::resource('nhapxe','nhapxecontroller');
+Route::get('/search', 'nhapxecontroller@search');
+Route::post('nhapxeimport', 'nhapxecontroller@import')->name('nhapxeimport');
 
-Route::resource('congno','congnoController');
-Route::get('/search', 'congnoController@search');
+Route::resource('congno','congnocontroller');
+Route::get('/search', 'congnocontroller@search');
 
-Route::resource('ktquatang','ktquatangController');
-Route::get('/search', 'ktquatangController@search');
+Route::resource('ktquatang','ktquatangcontroller');
+Route::get('/search', 'ktquatangcontroller@search');
 
-Route::resource('xuatnoibo','xuatnoiboController');
-Route::get('export', 'xuatnoiboController@export')->name('export');
-Route::get('hoadonnoibo', 'xuatnoiboController@xuathdnoibo')->name('banxe_xuatnoibo');
+Route::resource('xuatnoibo','xuatnoibocontroller');
+Route::get('export', 'xuatnoibocontroller@export')->name('export');
+Route::get('hoadonnoibo', 'xuatnoibocontroller@xuathdnoibo')->name('banxe_xuatnoibo');
 
 
-Route::resource('banxi','banxiController');
-Route::get('/search', 'banxiController@search');
-Route::get('changeStatus2', 'banxiController@changeStatus');
-Route::get('hoadonbanxi', 'banxiController@xuathdbanxi')->name('banxe_xuatxi');
+Route::resource('banxi','banxicontroller');
+Route::get('/search', 'banxicontroller@search');
+Route::get('changeStatus2', 'banxicontroller@changeStatus');
+Route::get('hoadonbanxi', 'banxicontroller@xuathdbanxi')->name('banxe_xuatxi');
 
-Route::resource('banxe','banxeController');
-Route::get('changeStatus1', 'banxeController@changeStatus1');
-Route::get('search', 'banxeController@search')->name('cities.search');
-Route::get('searchbanxe', 'banxeController@searchSokhung')->name('sokhung.search');
-Route::post('getbanxe', 'banxeController@selectAjax')->name('getbanxe');
+Route::resource('banxe','banxecontroller');
+Route::get('changeStatus1', 'banxecontroller@changeStatus1');
+Route::get('search', 'banxecontroller@search')->name('cities.search');
+Route::get('searchbanxe', 'banxecontroller@searchSokhung')->name('sokhung.search');
+Route::post('getbanxe', 'banxecontroller@selectAjax')->name('getbanxe');
 
-Route::get('show/{id}', 'banxeController@show')->name('banxe_show');
-Route::get('hoadonbanxe', 'banxeController@xuathdbanle')->name('banxe_xuat');
+Route::get('show/{id}', 'banxecontroller@show')->name('banxe_show');
+Route::get('hoadonbanxe', 'banxecontroller@xuathdbanle')->name('banxe_xuat');
 
-Route::resource('chi','chiController');
+Route::resource('chi','chicontroller');
 
-Route::resource('thungoai','thungoaiController');
+Route::resource('thungoai','thungoaicontroller');
 
-Route::resource('phukien','phukienController');
+Route::resource('banphukien','banphukiencontroller');
+
+Route::resource('khophukien','khophukiencontroller');

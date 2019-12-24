@@ -75,9 +75,15 @@
                         <i class="fa fa-flag"></i> <span>Thu ngoài </span>
                     </a>
                 </li>
+
                 <li>
-                    <a href="{{ route('phukien.index') }} " class="nav-link">
-                        <i class="fa fa-flag"></i> <span>Phụ kiện </span>
+                    <a href="{{ route('banphukien.index') }} " class="nav-link">
+                        <i class="fa fa-flag"></i> <span> Bán phụ kiện</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('khophukien.index') }} " class="nav-link">
+                        <i class="fa fa-flag"></i> <span> Kho phụ kiện</span>
                     </a>
                 </li>
             </div>

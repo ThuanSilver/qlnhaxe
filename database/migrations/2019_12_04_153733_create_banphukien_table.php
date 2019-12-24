@@ -22,6 +22,7 @@ class CreateBanphukienTable extends Migration
             $table->string('nhap');
             $table->date('ngaynhap');
             $table->integer('conlai');
+            $table->unsignedBigInteger('banphukien_id')->unsigned();
             $table->timestamps();
         });
     }

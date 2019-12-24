@@ -14,6 +14,10 @@ use Maatwebsite\Excel\Facades\Excel;
 
 class banxicontroller extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $banxis = banxi::latest()->paginate(10);

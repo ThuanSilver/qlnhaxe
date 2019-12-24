@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class thungoaicontroller extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $thungoais = thungoai::latest()->paginate(10);

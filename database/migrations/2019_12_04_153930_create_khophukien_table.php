@@ -20,6 +20,7 @@ class CreateKhophukienTable extends Migration
             $table->integer('soluong');
             $table->integer('gia');
             $table->integer('tongtien');
+            $table->string('tenphukien');
             $table->timestamps();
         });
     }

@@ -9,6 +9,17 @@ use App\Imports\khachhangimport;
 use Maatwebsite\Excel\Facades\Excel;
 class khachhangcontroller extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+
     public function index()
     {
         $khachhangs = khachhang::latest()->paginate(10);

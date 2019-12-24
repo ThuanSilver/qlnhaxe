@@ -10,6 +10,10 @@ use Maatwebsite\Excel\Facades\Excel;
 use App\Imports\quatangimport;
 class quatangcontroller extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $quatangs = quatang::latest()->paginate(10);
