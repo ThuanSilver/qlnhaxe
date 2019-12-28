@@ -16,13 +16,6 @@
 #Công dụng
 - đã up lên hosting với tên miền là [hondatu2.com](https://hondatu2.com)
 
-.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
 ## CÁC BƯỚC CÀI ĐẶT
 
@@ -42,9 +35,11 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 Nhập xuất tìm kiếm xe ra vào kho, xe đã bán, thông tin khách hàng và trả góp ( dành cho nhân viên ),Thông báo nếu đến sinh nhật khách hàng để Cty trích quà tặng cho khách hàng.Có 1 trang New để In ra cái hoá đơn trong ngày để chủ dễ dàng xem được
 Dịch vụ: Trò chuyện trực tiếp để hỗ trợ khách hàng
 
-## Security Vulnerabilities
+## Hướng phát triển cho bài Toán
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- # Tự động cập nhật thống kê theo từng ngày
+- # tích hợp một số dịch vụ Email
+- # Cung cấp cho nhiều cửa hàng Honda khác
 
 ## License
 
